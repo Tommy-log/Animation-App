@@ -22,6 +22,7 @@ class SecondViewController: UIViewController {
     
     private lazy var procentTextField: UITextField = {
        let textField = UITextField()
+        textField.backgroundColor = .white
         textField.placeholder = "procent"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -29,6 +30,7 @@ class SecondViewController: UIViewController {
     
     private lazy var progresLabel: UILabel = {
        let label = UILabel()
+        label.font = UIFont(name: "Arial", size: 32)
         label.text = "0"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -79,9 +81,9 @@ class SecondViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            progresLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            progresLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            progresLabel.heightAnchor.constraint(equalToConstant: 30)
+            progresLabel.centerYAnchor.constraint(equalTo: square.centerYAnchor),
+            progresLabel.centerXAnchor.constraint(equalTo: square.centerXAnchor),
+            progresLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
         
         NSLayoutConstraint.activate([
@@ -158,11 +160,11 @@ class SecondViewController: UIViewController {
     private func getArrayColors(progress: Int) -> [CGColor] {
         switch progress {
         case 0...25:
-            return [UIColor.red.cgColor]
+            return [UIColor.systemRed.cgColor]
         case 26...60:
-            return [UIColor.red.cgColor, UIColor.yellow.cgColor]
+            return [UIColor.systemRed.cgColor, UIColor.systemOrange.cgColor]
         case 61...100:
-            return [UIColor.red.cgColor, UIColor.yellow.cgColor, UIColor.green.cgColor]
+            return [UIColor.systemRed.cgColor, UIColor.systemOrange.cgColor, UIColor.systemGreen.cgColor]
         default:
             return []
         }
