@@ -9,7 +9,7 @@ import UIKit
 
 final class ThirdViewController: UIViewController {
     
-    var drawer: Drawer
+    var drawer = ArrowDrawer()
     var arrowLayer: CAShapeLayer?
     var indicatorArrowLayer: CAShapeLayer?
     
@@ -20,8 +20,7 @@ final class ThirdViewController: UIViewController {
         return container
     }()
     
-    init(drawer: Drawer) {
-        self.drawer = drawer
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,8 +30,8 @@ final class ThirdViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        arrowLayer?.path = drawer.getArrowShapePath(container: container)
-        indicatorArrowLayer?.path = drawer.getArrowShapePath(container: container)
+        arrowLayer?.path = drawer.getShapePath(container: container)
+        indicatorArrowLayer?.path = drawer.getShapePath(container: container)
     }
     
     override func viewDidLoad() {
@@ -43,8 +42,8 @@ final class ThirdViewController: UIViewController {
     }
     
     private func addLayer() {
-        let backgroundLayer = drawer.getBackgroundArrowShapeLayer(container: container)
-        let indicatorLayer = drawer.getIndicatorArrowShapeLayer(container: container)
+        let backgroundLayer = drawer.getShapeLayer(container: container)
+        let indicatorLayer = drawer.getIndicatorLayer(container: container)
         container.layer.addSublayer(backgroundLayer)
         container.layer.addSublayer(indicatorLayer)
         self.indicatorArrowLayer = indicatorLayer

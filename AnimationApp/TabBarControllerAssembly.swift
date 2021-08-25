@@ -9,7 +9,6 @@ import UIKit
 
 final class TabBarControllerAssembly {
     
-    private let drawer = Drawer()
     private let tabBarController = UITabBarController()
     
     
@@ -17,26 +16,7 @@ final class TabBarControllerAssembly {
         tabBarController.selectedIndex = 2
         tabBarController.setViewControllers(getViewControllers(),
                                             animated: false)
-        addBarItemsForViewController()
         return tabBarController
-    }
-    
-    private func addBarItemsForViewController() {
-        let viewControllers = getViewControllers()
-        let items = getBarItems()
-        
-        for i in 0..<viewControllers.count {
-            viewControllers[i].tabBarItem = items[i]
-        }
-    }
-    
-    private func getBarItems() -> [UITabBarItem] {
-        let items = [
-            UITabBarItem(title: "first", image: UIImage(systemName: "1.square"), tag: 0),
-            UITabBarItem(title: "second", image: UIImage(systemName: "2.square"), tag: 1),
-            UITabBarItem(title: "third", image: UIImage(systemName: "3.square"), tag: 2)
-        ]
-        return items
     }
     
     private func getViewControllers() -> [UIViewController] {
@@ -46,9 +26,10 @@ final class TabBarControllerAssembly {
         let secondViewController = SecondViewController()
         secondViewController.title = "second"
         secondViewController.tabBarItem.image = UIImage(systemName: "2.square")
-        let thirdViewController = ThirdViewController(drawer: drawer)
+        let thirdViewController = ThirdViewController()
         thirdViewController.title = "third"
         thirdViewController.tabBarItem.image = UIImage(systemName: "3.square")
+        
        return [
         firstViewController,
         secondViewController,

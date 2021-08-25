@@ -9,7 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    private let drawer = Drawer()
+    private let drawer = CircleDrawer()
     private var backgroundLayer: CAShapeLayer?
     private var progressLayer: CAShapeLayer?
     
@@ -54,8 +54,8 @@ class SecondViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        backgroundLayer?.path = drawer.getCircleShapePath(container: square)
-        progressLayer?.path = drawer.getCircleShapePath(container: square)
+        backgroundLayer?.path = drawer.getShapePath(container: square)
+        progressLayer?.path = drawer.getShapePath(container: square)
     }
     
     override func viewDidLoad() {
@@ -110,8 +110,8 @@ class SecondViewController: UIViewController {
     }
     
     private func addLayer() {
-        let backgroundLayer = drawer.getCircleShapeLayer(container: square)
-        let progressLayer = drawer.getCircleIndicatorLayer(container: square)
+        let backgroundLayer = drawer.getShapeLayer(container: square)
+        let progressLayer = drawer.getIndicatorLayer(container: square)
         view.layer.addSublayer(backgroundLayer)
         view.layer.insertSublayer(progressLayer, above: backgroundLayer)
         self.backgroundLayer = backgroundLayer
