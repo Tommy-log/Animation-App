@@ -26,7 +26,7 @@ final class ArrowDrawer: IndicatorDrawable {
         let layer = CAShapeLayer()
         layer.lineJoin = .round
         layer.path = getShapePath(container: container)
-        layer.lineWidth = 6
+        layer.lineWidth = 5
         layer.fillColor = nil
         layer.strokeColor = UIColor.lightGray.cgColor
         return layer
@@ -36,11 +36,11 @@ final class ArrowDrawer: IndicatorDrawable {
         let layer = CAShapeLayer()
         layer.path = getShapePath(container: container)
         layer.lineJoin = .round
-        layer.lineWidth = 6
+        layer.lineWidth = 3
         layer.lineCap = .round
         layer.fillColor = nil
-        layer.strokeColor = UIColor.green.cgColor
-        layer.strokeEnd = 0.5
+        layer.strokeColor = UIColor.cyan.cgColor
+        layer.strokeEnd = 0
         return layer
     }
     
