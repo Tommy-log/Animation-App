@@ -12,7 +12,6 @@
 		CE0FED5026D638A000AC6744 /* CircleDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FED4F26D638A000AC6744 /* CircleDrawer.swift */; };
 		CE0FED5726D63CE800AC6744 /* ArrowDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FED5626D63CE800AC6744 /* ArrowDrawer.swift */; };
 		CE0FED5C26D6413500AC6744 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FED5B26D6413500AC6744 /* Drawable.swift */; };
-		CEB9EDE926CF8C6B00D3ACC0 /* Pods-AnimationApp.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CEB9EDE826CF8C6B00D3ACC0 /* Pods-AnimationApp.debug.xcconfig */; };
 		CEBF356826CCFBE800B05C32 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF356726CCFBE800B05C32 /* SecondViewController.swift */; };
 		CEDC8BE726D3937600ADBB54 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC8BE626D3937600ADBB54 /* ThirdViewController.swift */; };
 		CEEACE5626C9660A009A2092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEACE5526C9660A009A2092 /* AppDelegate.swift */; };
@@ -173,7 +172,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEACE6226C9660B009A2092 /* LaunchScreen.storyboard in Resources */,
-				CEB9EDE926CF8C6B00D3ACC0 /* Pods-AnimationApp.debug.xcconfig in Resources */,
 				CEEACE5F26C9660B009A2092 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
